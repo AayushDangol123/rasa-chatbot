@@ -1,0 +1,27 @@
+version: "2.0"
+
+stories:
+- story: initial
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: collegefindbtn
+  steps:
+  - intent: affirm
+  - action: utter_btn1
+
+- story: donothingbtn
+  steps:
+  - intent: deny
+  - action: utter_btn2
+
+- story: engineerpath
+  steps:
+  - intent: engineer
+  - action: utter_engr
+
+- story: engloc
+  steps:
+  - intent: locations
+  - action: action_findengr

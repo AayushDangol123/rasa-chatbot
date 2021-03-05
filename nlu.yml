@@ -1,0 +1,47 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: deny
+  examples: |
+    - no
+- intent: affirm
+  examples: |
+    - yes
+    - ya
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - /affirm
+- intent: engineer
+  examples: |
+    - Engineering
+    - Architect
+    - Mechanical Engineering
+    - Civil Engineering
+    - Chemical Engineering
+    - Industrial Engineering
+    - chemical Engineering
+    - computer Engineering
+- intent: locations
+  examples: |
+    - [Trade Tower](location)
+    - [Ganeshman Singh Road]"location)
+    - [Balkumari Rd](location)
+    - [Chyasal](location)
+    - [Kriti Marg](location)
+    - [Sanepa](location)

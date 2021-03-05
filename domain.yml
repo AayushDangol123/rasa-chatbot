@@ -1,0 +1,43 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- engineer:
+    use_entities: true
+- locations:
+    use_entities: true
+entities:
+- location
+slots:
+  location:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /affirm
+      title: find a college..
+    - payload: /deny
+      title: Do nothing
+    text: Hey! How can i help you??
+  utter_btn1:
+  - text: ok..what field do you want to study in??
+  utter_btn2:
+  - text: byeee!!!!
+  utter_engr:
+  - text: can you specify the location where you want to be studying??
+actions:
+- action_findengr
+forms: {}
+e2e_actions: []
